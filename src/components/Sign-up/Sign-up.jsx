@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-import { setCookie, setUserData } from '../../redux/user-actions';
+import { setCookie, setUserData } from '../../redux/userSlice';
 import { registerUser } from '../../services/services';
 
 import style from './Sign-up.module.scss';

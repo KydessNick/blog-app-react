@@ -1,42 +1,56 @@
 // {
-//     "env": {
-//         "browser": true,
-//         "es2021": true
+//   "env": {
+//     "browser": true,
+//     "es2021": true
+//   },
+//   "ignorePatterns": ["node_modules", "dist", "build"],
+//   "extends": [
+//     "eslint:recommended",
+//     "plugin:react/recommended",
+//     "plugin:prettier/recommended",
+//     "plugin:import/errors",
+//     "plugin:import/warnings"
+//   ],
+//   "parserOptions": {
+//     "ecmaFeatures": {
+//       "jsx": true
 //     },
-
-//     "ignorePatterns": ["node_modules", "dist", "build"],
-//     "extends": [
-//         "eslint:recommended",
-//         "plugin:react/recommended",
-//         "plugin:prettier/recommended",
-//         "plugin:import/errors",
-//         "plugin:import/warnings"
-//     ],
-//     "parserOptions": {
-//         "ecmaFeatures": {
-//             "jsx": true
-//         },
-//         "ecmaVersion": "latest",
-//         "sourceType": "module"
-//     },
-//     "plugins": ["react", "prettier", "import"],
-//     "rules": {
-//         "prettier/prettier": ["error",
-//         {
-//             "endOfLine": "auto"
-//             }],
-//         "arrow-body-style": "off",
-//         "prefer-arrow-callback": "off"
-//       },
-
-//     "settings": {
-//         "import/resolver": {
-//             "node": {
-//                 "extensions": [".js", ".jsx", ".ts", ".tsx"],
-//                 "moduleDirectory": ["node_modules", "src/"]
-//             }
+//     "ecmaVersion": 12,
+//     "sourceType": "module"
+//   },
+//   "plugins": ["react", "prettier", "import"],
+//   "rules": {
+//     "indent": ["error", 2, { "SwitchCase": 1 }],
+//     "prettier/prettier": "error",
+//     "linebreak-style": [0, "unix"],
+//     "quotes": ["error", "single"],
+//     "semi": ["error", "always"],
+//     "react/react-in-jsx-scope": "off",
+//     "react/prop-types": 0,
+//     "no-useless-escape": 0,
+//     "react/no-unescaped-entities": 0,
+//     "no-unused-vars": 0,
+//     "import/no-unresolved": [2, { "caseSensitive": false }],
+//     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+//     "import/order": [
+//       2,
+//       {
+//         "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+//         "newlines-between": "always"
+//       }
+//     ]
+//   },
+//   "settings": {
+//     "import/resolver": {
+//       "node": {
+//         "extensions": [".js", ".jsx", ".ts", ".tsx"],
+//         "moduleDirectory": ["node_modules", "src/"],
+//         "react": {
+//           "version": "detect"
 //         }
+//       }
 //     }
+//   }
 // }
 
 // {
@@ -188,38 +202,41 @@
   },
   "plugins": ["react", "prettier", "import"],
   "rules": {
-    "indent": [
-      "error",
-      4,
-      {
-        "SwitchCase": 1
-      }
-    ],
-    "prettier/prettier": "error",
-    "linebreak-style": [0, "unix"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "never"],
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": 0,
-    "import/no-unresolved": [
-      2,
-      {
-        "caseSensitive": false
-      }
-    ],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "import/order": [
-      2,
-      {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-        "newlines-between": "always"
-      }
-    ]
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react/prop-types": "off"
+    // "indent": [
+    //     "error",
+    //     4,
+    //     {
+    //         "SwitchCase": 1
+    //     }
+    // ],
+    // "prettier/prettier": "error",
+    // "linebreak-style": [0, "unix"],
+    // "quotes": ["error", "single"],
+    // "semi": ["error", "never"],
+    // "react/react-in-jsx-scope": "off",
+    // "react/prop-types": 0,
+    // "import/no-unresolved": [
+    //     2,
+    //     {
+    //         "caseSensitive": false
+    //     }
+    // ],
+    // "react/jsx-filename-extension": [
+    //     1,
+    //     {
+    //         "extensions": [".js", ".jsx"]
+    //     }
+    // ],
+    // "import/order": [
+    //     2,
+    //     {
+    //         "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+    //         "newlines-between": "always"
+    //     }
+    // ]
   },
   "settings": {
     "import/resolver": {
