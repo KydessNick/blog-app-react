@@ -12,27 +12,6 @@ export const getUser = async (token) => {
 
 import { createSlice } from '@reduxjs/toolkit';
 
-// export const getUser = createAsyncThunk(
-//   'user/getUser',
-//   async (token, thunkAPI) => {
-//     try {
-//       const response = await fetch('https://blog.kata.academy/api/user', {
-//         method: 'GET',
-//         headers: {
-//           Authorization: `Token ${token}`,
-//         },
-//       });
-//       if (!response.ok) {
-//         throw new Error('Failed to fetch user data');
-//       }
-//       const data = await response.json();
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
-
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -52,14 +31,6 @@ export const userSlice = createSlice({
       state.userError = action.payload;
     },
   },
-  // extraReducers: (builder) => {
-  //   builder.addCase(getUser.fulfilled, (state, action) => {
-  //     state.userData = action.payload;
-  //   });
-  //   builder.addCase(getUser.rejected, (state, action) => {
-  //     state.userError = action.payload;
-  //   });
-  // },
 });
 
 export const { setUserData, setUserError } = userSlice.actions;

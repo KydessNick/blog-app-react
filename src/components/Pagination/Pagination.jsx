@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Pagination } from 'antd';
 
-import { getArticles, setOffset } from '../../redux/articleSlice';
-import { getCookie } from '../../redux/userSlice';
+import { getArticles, setOffset } from '../../store/redux/articleSlice';
+import { getCookie } from '../../store/redux/userSlice';
 
 import style from './Pagination.module.scss';
 

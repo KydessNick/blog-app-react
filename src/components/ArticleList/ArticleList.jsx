@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { Spin } from 'antd';
 
 import ArticleCard from '../ArticleCard/ArticleCard';
-import { getArticles } from '../../redux/articleSlice';
+import { getArticles } from '../../store/redux/articleSlice';
 import PaginationComponent from '../Pagination/Pagination';
-import { getCookie } from '../../redux/userSlice';
+import { getCookie } from '../../store/redux/userSlice';
 
 import styles from './ArticleList.module.scss';
 

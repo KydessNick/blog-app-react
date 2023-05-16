@@ -6,8 +6,8 @@ import { format } from 'date-fns';
 import { UserOutlined } from '@ant-design/icons';
 import { Link, withRouter } from 'react-router-dom';
 
-import { getArticle } from '../../redux/articleSlice';
-import { getCookie } from '../../redux/userSlice';
+import { getArticle } from '../../store/redux/articleSlice';
+import { getCookie } from '../../store/redux/userSlice';
 import { deleteArticle, favoriteArticle, unFavoriteArticle } from '../../services/services';
 
 import classesCard from '../ArticleCard/ArticleCard.module.scss';

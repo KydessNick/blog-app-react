@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { getCookie, setUserData } from '../../redux/userSlice';
+import { getCookie, setUserData } from '../../store/redux/userSlice';
 import { updateUser } from '../../services/services';
 
 import style from './EditProfile.module.scss';

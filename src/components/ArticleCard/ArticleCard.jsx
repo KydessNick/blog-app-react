@@ -5,9 +5,9 @@ import { Avatar, Tag, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getArticle } from '../../redux/articleSlice';
+import { getArticle } from '../../store/redux/articleSlice';
 import { favoriteArticle, unFavoriteArticle } from '../../services/services';
-import { getCookie } from '../../redux/userSlice';
+import { getCookie } from '../../store/redux/userSlice';
 
 import classesCard from './ArticleCard.module.scss';
 

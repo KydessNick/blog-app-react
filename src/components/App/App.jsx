@@ -7,7 +7,7 @@ import ArticleList from '../ArticleList/ArticleList';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import SignIn from '../Sign-in/Sign-in';
 import SignUp from '../Sign-up/Sign-up';
-import { getCookie, getUser, setUserData } from '../../redux/userSlice';
+import { getCookie, getUser, setUserData } from '../../store/redux/userSlice';
 import EditProfile from '../EditProfile/EditProfile';
 import CreateArticle from '../CreateArticle/CreateArticle';
 

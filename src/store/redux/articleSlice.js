@@ -16,8 +16,6 @@ export const getArticle = (slug, token) => async (dispatch) => {
     });
 };
 
-/////////////////////////////////////////////////////////////////////////////////////
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getArticles = createAsyncThunk('articles/getArticles', async (payload, { dispatch }) => {

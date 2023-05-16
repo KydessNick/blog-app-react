@@ -4,7 +4,7 @@ import { withRouter, Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { createArticle, editArticle } from '../../services/services';
-import { getCookie } from '../../redux/userSlice';
+import { getCookie } from '../../store/redux/userSlice';
 
 import styles from './CreateArticle.module.scss';
 
