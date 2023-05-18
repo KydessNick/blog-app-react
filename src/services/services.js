@@ -21,7 +21,6 @@ export const loginUser = async (email, password) => {
       if (res.status === 422) throw 422;
     })
     .then((data) => {
-      console.log(data);
       return data;
     })
     .catch((error) => {
@@ -151,7 +150,6 @@ export const favoriteArticle = async (slug, token) =>
       if (res.ok) return res.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
     });
 
@@ -167,6 +165,5 @@ export const unFavoriteArticle = async (slug, token) =>
       if (res.ok) return res.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
     });

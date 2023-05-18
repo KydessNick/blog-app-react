@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import Header from '../Header/Header';
 import ArticleList from '../ArticleList/ArticleList';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
-import SignIn from '../Sign-in/Sign-in';
-import SignUp from '../Sign-up/Sign-up';
-import { getCookie, getUser, setUserData } from '../../store/redux/userSlice';
+import SignIn from '../SignIn/SignIn';
+import SignUp from '../SignUp/SignUp';
+import { getCookie, getUser, setUserData } from '../../store/slices/userSlice';
 import EditProfile from '../EditProfile/EditProfile';
 import CreateArticle from '../CreateArticle/CreateArticle';
 
@@ -15,7 +15,6 @@ import classes from './App.module.scss';
 
 function App() {
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (getCookie('token')) {
       getUser(getCookie('token')).then(({ user: { username, email, image } }) => {

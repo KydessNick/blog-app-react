@@ -3,10 +3,10 @@ import { Link, withRouter } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-import { setCookie, setUserData } from '../../store/redux/userSlice';
+import { setCookie, setUserData } from '../../store/slices/userSlice';
 import { registerUser } from '../../services/services';
 
-import style from './Sign-up.module.scss';
+import style from './SignUp.module.scss';
 
 const SignUp = ({ history }) => {
   const dispatch = useDispatch();

@@ -5,16 +5,14 @@ import { Avatar, Tag, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getArticle } from '../../store/redux/articleSlice';
+import { getArticle } from '../../store/slices/articleSlice';
 import { favoriteArticle, unFavoriteArticle } from '../../services/services';
-import { getCookie } from '../../store/redux/userSlice';
+import { getCookie } from '../../store/slices/userSlice';
 
 import classesCard from './ArticleCard.module.scss';
 
 const ArticleCard = (props) => {
   const { articleData, isLogin } = props;
-  //   console.log(isLogin);
-  //   console.log(props);
   const [ellipsis] = useState(true);
   const { Paragraph } = Typography;
   const token = getCookie('token');
@@ -22,7 +20,6 @@ const ArticleCard = (props) => {
   const { title, favoritesCount, tagList, author, updatedAt, description, slug, favorited } = articleData;
   const [likesCount, setLikesCount] = useState(favoritesCount);
   const [like, setLike] = useState(favorited);
-
   const onLikeChange = () => {
     if (!like) {
       favoriteArticle(slug, token).then(({ article: { favorited, favoritesCount } }) => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
 
-import { deleteCookie, setUserData } from '../../store/redux/userSlice';
+import { deleteCookie, setUserData } from '../../store/slices/userSlice';
 
 import styles from './Header.module.scss';
 

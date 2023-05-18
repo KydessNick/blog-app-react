@@ -6,8 +6,8 @@ import { format } from 'date-fns';
 import { UserOutlined } from '@ant-design/icons';
 import { Link, withRouter } from 'react-router-dom';
 
-import { getArticle } from '../../store/redux/articleSlice';
-import { getCookie } from '../../store/redux/userSlice';
+import { getArticle } from '../../store/slices/articleSlice';
+import { getCookie } from '../../store/slices/userSlice';
 import { deleteArticle, favoriteArticle, unFavoriteArticle } from '../../services/services';
 
 import classesCard from '../ArticleCard/ArticleCard.module.scss';
@@ -29,8 +29,6 @@ const ArticleDetails = ({ currentArticle, slug, getArticle, username, history })
   };
 
   const { title, favoritesCount, tagList, author, updatedAt, description, body, favorited } = currentArticle;
-
-  console.log(currentArticle);
 
   const [likesCount, setLikesCount] = useState(favoritesCount);
   const [like, setLike] = useState(favorited);
