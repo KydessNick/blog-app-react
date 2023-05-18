@@ -1,3 +1,3 @@
-import SignIn from "./Sign-in";
+import SignIn from "./SignIn";
 
 export default SignIn
